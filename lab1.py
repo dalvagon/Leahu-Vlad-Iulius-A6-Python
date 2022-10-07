@@ -95,6 +95,16 @@ def count_bits(number):
         
 
 # Ex 9
+def most_common_letter(string):
+    max_occurrences = 0
+    letter = ''
+    for character in string.replace(' ', ''):
+        number_of_occurrences = string.count(character)
+        if number_of_occurrences > max_occurrences:
+            max_occurrences = number_of_occurrences
+            letter = character
+            
+    return letter 
 
 
 #Ex 10
@@ -124,4 +134,6 @@ if __name__ == "__main__":
     
     # print(count_bits(24))
     
-    print(count_words("I have Python exam"));
+    # print(count_words("I have Python exam"));
+    
+    print(most_common_letter("an apple is not a tomato"))
