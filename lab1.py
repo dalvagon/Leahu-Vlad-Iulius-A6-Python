@@ -3,9 +3,7 @@ def gcd(numbers):
     def gcd2(x, y):
         if y == 0:
             return x
-        while y:
-            x, y = y, x % y
-        return x
+        return gcd2(y, x % y)
 
     if len(numbers) == 0:
         return "Empty list"
