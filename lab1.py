@@ -118,27 +118,35 @@ def count_words(string):
 
 
 if __name__ == "__main__":
-    # print("Enter an array of numbers to compute their gcd:")
-    # print(gcd([int(number) for number in input().split()]))
+    print("Enter an array of numbers to compute their gcd:")
+    print(gcd([int(number) for number in input().split()]))
 
-    # print("Enter a string to count it's vowels:")
-    # print(count_vowels(input()))
+    print("Enter a string to count it's vowels:")
+    print(count_vowels(input()))
 
-    # print("Enter two strings to count the number of occurrences of the first string in the second:")
-    # print(count_occurrences(input(), input()))
+    print(
+        "Enter two strings to count the number of occurrences of the first string in the second:"
+    )
+    print(count_occurrences(input(), input()))
 
-    # print("Enter a string written in UpperCamelCase to be converted into lowercase_with_underscores:")
-    # print(convert_upper_camel_case_to_lowercase_with_underscores(input()))
+    print(
+        "Enter a string written in UpperCamelCase to be converted into lowercase_with_underscores:"
+    )
 
-    # print(spiral_order_string_from_matrix(['firs', 'n_lt', 'oba_', 'htyp']))
-    # print(spiral_order_string_from_matrix(['abcde', 'pqrsf', 'oxytg', 'nwvuh', 'mlkji']))
+    print(convert_upper_camel_case_to_lowercase_with_underscores(input()))
 
-    # print(is_palindrome(12321))
+    print(spiral_order_string_from_matrix(["firs", "n_lt", "oba_", "htyp"]))
 
-    # print(extract_first_number("ads sfa  faf192r "))
+    print(
+        spiral_order_string_from_matrix(["abcde", "pqrsf", "oxytg", "nwvuh", "mlkji"])
+    )
 
-    # print(count_bits(24))
+    print(is_palindrome(12321))
 
-    # print(count_words("I have Python exam"));
+    print(extract_first_number("ads sfa  faf192r "))
+
+    print(count_bits(24))
+
+    print(count_words("I have Python exam"))
 
     print(most_common_letter("an apple is not a tomato"))
