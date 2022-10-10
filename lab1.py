@@ -21,7 +21,25 @@ def count_vowels(string):
 
 # Ex 3
 def count_occurrences(string1, string2):
-    return string2.count(string1)
+    number_of_occurences = 0
+
+    if len(string1) > len(string2):
+        aux = string1
+        string1 = string2
+        string2 = aux
+
+    for index2 in range(0, len(string2)):
+        expected_number_of_occurences = 0
+        for index1 in range(0, len(string1)):
+            if string2[index2] == string1[index1]:
+                expected_number_of_occurences += 1
+            else:
+                break
+
+        if expected_number_of_occurences == len(string1):
+            number_of_occurences += 1
+
+    return number_of_occurences
 
 
 # Ex 4
@@ -41,9 +59,11 @@ def spiral_order_string_from_matrix(matrix):
     column_start = 0
     column_end = length - 1
     elements = length * length
+    #  string = ''
     string = []
     while elements:
         for index in range(row_start, row_end + 1):
+            # string += matrix[][]
             string.append(matrix[column_start][index])
             elements -= 1
 
@@ -73,7 +93,6 @@ def spiral_order_string_from_matrix(matrix):
 # EX 6
 def is_palindrome(number):
     string = str(number)
-    print(string[::-1])
     return string == string[::-1]
 
 
@@ -117,36 +136,43 @@ def count_words(string):
     return len(string.split())
 
 
+def extract_even_numbers(numbers):
+    return [number for number in numbers if number % 2 == 0]
+
+
 if __name__ == "__main__":
-    print("Enter an array of numbers to compute their gcd:")
-    print(gcd([int(number) for number in input().split()]))
+    print("Enter an array of numbers to extract the even numbers:")
+    print(extract_even_numbers([int(number) for number in input().split()]))
 
-    print("Enter a string to count it's vowels:")
-    print(count_vowels(input()))
+    # print("Enter an array of numbers to compute their gcd:")
+    # print(gcd([int(number) for number in input().split()]))
 
-    print(
-        "Enter two strings to count the number of occurrences of the first string in the second:"
-    )
-    print(count_occurrences(input(), input()))
+    # print("Enter a string to count it's vowels:")
+    # print(count_vowels(input()))
 
-    print(
-        "Enter a string written in UpperCamelCase to be converted into lowercase_with_underscores:"
-    )
+    # print(
+    #     "Enter two strings to count the number of occurrences of the first string in the second:"
+    # )
+    # print(count_occurrences(input(), input()))
 
-    print(convert_upper_camel_case_to_lowercase_with_underscores(input()))
+    # print(
+    #     "Enter a string written in UpperCamelCase to be converted into lowercase_with_underscores:"
+    # )
 
-    print(spiral_order_string_from_matrix(["firs", "n_lt", "oba_", "htyp"]))
+    # print(convert_upper_camel_case_to_lowercase_with_underscores(input()))
 
-    print(
-        spiral_order_string_from_matrix(["abcde", "pqrsf", "oxytg", "nwvuh", "mlkji"])
-    )
+    # print(spiral_order_string_from_matrix(["firs", "n_lt", "oba_", "htyp"]))
 
-    print(is_palindrome(12321))
+    # print(
+    #     spiral_order_string_from_matrix(["abcde", "pqrsf", "oxytg", "nwvuh", "mlkji"])
+    # )
 
-    print(extract_first_number("ads sfa  faf192r "))
+    # print(is_palindrome(12321))
 
-    print(count_bits(24))
+    # print(extract_first_number("ads sfa  faf192r "))
 
-    print(count_words("I have Python exam"))
+    # print(count_bits(24))
 
-    print(most_common_letter("an apple is not a tomato"))
+    # print(count_words("I have Python exam"))
+
+    # print(most_common_letter("an apple is not a tomato"))
