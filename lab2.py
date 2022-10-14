@@ -113,6 +113,62 @@ def palindrome_tuple(numbers):
     return (ret_lst, max(ret_lst))
 
 
+# Ex 8
+def ascii_divisible_characters(strings, x=1, flag=True):
+    int_flag = 0
+    if not flag:
+        int_flag = 1
+
+    return [
+        [character for character in string if ord(character) % x == int_flag]
+        for string in strings
+    ]
+
+
+# Ex 9
+def blind_spectators(matrix):
+    return [
+        (index1, index2)
+        for index1 in range(0, len(matrix))
+        for index2 in range(0, len(matrix[0]))
+        if len(
+            [
+                matrix[index3][index2]
+                for index3 in range(0, index1)
+                if (matrix[index1][index2] <= matrix[index3][index2])
+            ]
+        )
+        > 0
+    ]
+
+
+# Ex 10
+def list_of_tuples(*lists):
+    length = max([len(lst) for lst in lists])
+    return [
+        tuple([lst[index] if index < len(lst) else None for lst in lists])
+        for index in range(0, length)
+    ]
+
+
+# Ex 11
+def sort_tuples(tuples):
+    return sorted(tuples, key=lambda tuple: tuple[1][2])
+
+
+# Ex 12
+def group_by_rhyme(words):
+    ret_list = []
+    for word in words:
+        rhyming_words_list = [
+            other_word for other_word in words if word[-2:] == other_word[-2:]
+        ]
+        if not rhyming_words_list in ret_list:
+            ret_list.append(rhyming_words_list)
+
+    return ret_list
+
+
 if __name__ == "__main__":
     # print(first_fibonacci_numbers(30))
 
@@ -134,4 +190,23 @@ if __name__ == "__main__":
 
     # print(build_appearance_list([1, 2, 3], [2, 3, 4], [4, 5, 6], [4, 1, "test"], x=2))
 
-    print(palindrome_tuple([number for number in range(100)]))
+    # print(palindrome_tuple([number for number in range(100)]))
+
+    # print(ascii_divisible_characters(["test", "hello", "lab002"], 2, False))
+
+    # print(
+    #     blind_spectators(
+    #         [
+    #             [1, 2, 3, 2, 1, 1],
+    #             [2, 4, 4, 3, 7, 2],
+    #             [5, 5, 2, 5, 6, 4],
+    #             [6, 6, 7, 6, 7, 5],
+    #         ]
+    #     )
+    # )
+
+    # print(list_of_tuples([1, 2, 3], [5, 6, 7], ["a", "b", "c", "d"]))
+
+    # print(sort_tuples([("abc", "bcd"), ("abc", "zza")]))
+
+    print(group_by_rhyme(["ana", "banana", "carte", "arme", "parte"]))
