@@ -1,6 +1,6 @@
 # Ex 7
 def palindrome_tuple(numbers):
-    ret_lst = [number for number in numbers if str(number) == str(number)[::-1]]
+    ret_lst = list(filter(lambda number: str(number) == str(number)[::-1], numbers))
 
     return (len(ret_lst), max(ret_lst))
 
