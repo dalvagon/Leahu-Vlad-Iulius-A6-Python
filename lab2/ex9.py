@@ -8,7 +8,7 @@ def blind_spectators(matrix):
             [
                 matrix[index3][index2]
                 for index3 in range(0, index1)
-                if (matrix[index1][index2] <= matrix[index3][index2])
+                if matrix[index1][index2] <= matrix[index3][index2]
             ]
         )
         > 0
