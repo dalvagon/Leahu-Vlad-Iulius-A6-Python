@@ -1,0 +1,2 @@
+.\testDir\abc.txt
+.\testDir\testDir1\testDir2\AbcD.pdf
