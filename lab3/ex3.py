@@ -18,6 +18,18 @@ def compare_dictionaires(item1, item2, parent="root"):
             compare_dictionaires(item1[key], item2[key], parent + ":" + str(key))
 
     elif isinstance(item1, list) and isinstance(item2, list):
+        if len(item1) != len(item2):
+            print(
+                "len("
+                + parent
+                + "."
+                + str(item1)
+                + ") != len("
+                + parent
+                + "."
+                + str(item2)
+                + ")"
+            )
         min_len = min(len(item1), len(item2))
         for index in range(0, min_len):
             compare_dictionaires(
