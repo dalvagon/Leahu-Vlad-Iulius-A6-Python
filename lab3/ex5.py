@@ -4,6 +4,7 @@ def validate_dict(ruleset, dictionary):
         if not (
             value.find(rule[1]) == 0
             and value.find(rule[2]) > 0
+            and value.find(rule[2]) + len(rule[2]) < len(value)
             and value.find(rule[3]) == len(value) - len(rule[3])
         ):
             return False

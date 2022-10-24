@@ -1,12 +1,11 @@
 def count_values(*numbers, **kvs):
-    count = 0
-    for number in numbers:
-        for key in kvs.keys():
-            if kvs[key] == number:
-                count += 1
-                break
-
-    return count
+    return len(
+        [
+            number
+            for number in numbers
+            if len([key for key in kvs.keys() if kvs[key] == number])
+        ]
+    )
 
 
 if __name__ == "__main__":

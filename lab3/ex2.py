@@ -1,9 +1,5 @@
 def count_occurences(string):
-    occurences = {}
-    for character in string:
-        occurences[character] = string.count(character)
-
-    return occurences
+    return {character: string.count(character) for character in string}
 
 
 if __name__ == "__main__":
