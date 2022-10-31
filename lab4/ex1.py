@@ -25,5 +25,5 @@ if __name__ == "__main__":
         print(list_extensions(directory))
     except FileNotFoundError:
         print("Folder  " + directory + " not found")
-    # except:
-    #     print("Error")
+    except:
+        print("Error")

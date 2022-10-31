@@ -9,6 +9,7 @@ def read_dir_or_file(path):
                 file_name[file_name.find(".") :]
                 for file_names in [files for (root, dirs, files) in os.walk(path)]
                 for file_name in file_names
+                if "." in file_name
             ]
         )
 
