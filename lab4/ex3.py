@@ -31,7 +31,7 @@ def read_dir_or_file(path):
 
 if __name__ == "__main__":
     try:
-        print(read_dir_or_file(join(".", "testDir")))
+        print(read_dir_or_file("testDir"))
     except Exception as e:
         print(str(e))
 

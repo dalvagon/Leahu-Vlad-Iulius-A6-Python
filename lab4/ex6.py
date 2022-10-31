@@ -30,5 +30,5 @@ def search(target, to_search, callback):
 
 
 if __name__ == "__main__":
-    print(search(join(".", "testDir"), "word", handle_exception))
-    print(search(join(".", "asf"), "word", handle_exception))
+    print(search("testDir", "word", handle_exception))
+    print(search("asf", "word", handle_exception))

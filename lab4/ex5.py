@@ -24,11 +24,11 @@ def search(target, to_search):
 
 if __name__ == "__main__":
     try:
-        print(search(join(".", "testDir"), "word"))
+        print(search("testDir", "word"))
     except Exception as e:
         print(str(e))
 
     try:
-        print(search(join(".", "asf"), "word"))
+        print(search("asf", "word"))
     except Exception as e:
         print(str(e))

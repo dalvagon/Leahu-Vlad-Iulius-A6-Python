@@ -12,4 +12,4 @@ def write_to_file(directory, file):
 
 
 if __name__ == "__main__":
-    write_to_file(join(".", "testDir"), join("testDir", "ex2Output.txt"))
+    write_to_file("testDir", join("testDir", "ex2Output.txt"))

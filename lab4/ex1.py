@@ -20,7 +20,7 @@ def list_extensions(directory):
 
 
 if __name__ == "__main__":
-    directory = join(".", "testDir")
+    directory = "testDir"
     try:
         print(list_extensions(directory))
     except FileNotFoundError:
