@@ -32,7 +32,6 @@ def process(**kvs):
 
 
 def sum_digits(x):
-
     return sum(map(int, str(x)))
 
 

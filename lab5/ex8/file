@@ -1,7 +1,0 @@
-def function(*args, **argvs):
-    print(
-        "Arguments are: "
-        + str(args)
-        + ", "
-        + str({key: argvs[key] for key in argvs.keys()})
-    )
